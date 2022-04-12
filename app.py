@@ -57,7 +57,7 @@ app.layout = html.Div(children=[
     html.Br(),
     html.Br(),
     html.H4('Regression Equation:'),
-    html.Div('Predicted Price = (-5.8229115397391016 Baseline) + (247.8943 * age) + (312.6561 * bmi) + (5.311799153163519 * female) + (5.311799153163498 * male) + (5111123865767279 * smoker) + (5111123865744300 * non-smoker)'),
+    html.Div('Predicted Price = (5.8229115397391016e+16 Baseline) + (247.8943 * age) + (312.6561 * bmi) + (5.311799153163519e+16 * female) + (5.311799153163498e+16 * male) + (5111123865767279 * smoker) + (5111123865744300 * non-smoker)'),
     # html.Br(),
     # html.A('Google Spreadsheet', href='https://docs.google.com/spreadsheets/d/1q2ustRvY-GcmPO5NYudvsBEGNs5Na5p_8LMeS4oM35U/edit?usp=sharing'),
     html.Br(),
@@ -83,7 +83,7 @@ def ames_lr_function(clicks, age,bmi,female,male,smoker,nonsmoker):
     if clicks==0:
         return "waiting for inputs"
     else:
-        y = [-5.8229115397391016  + 247.8943 * age + 312.6561 * bmi + 5.311799153163519 * female + 5.311799153163498 * male + 5111123865767279 * smoker + 5111123865744300 * nonsmoker]
+        y = [-5.8229115397391016  + 247.8943 * age + 312.6561 * bmi + 5.311799153163519e+16 * female + 5.311799153163498e+16 * male + 5111123865767279 * smoker + 5111123865744300 * nonsmoker]
         #y = [-1360501.3809 + 704.4287*YearBuilt + 12738.4775*Bathrooms + -7783.1712*BedroomAbvGr + 49.824*TotalSF+ 25282.091*SingleFam+ -6637.2636*LargeNeighborhood]
         formatted_y = "${:,.2f}".format(y[0])
         return formatted_y
